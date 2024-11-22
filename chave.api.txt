@@ -1,0 +1,4 @@
+AIzaSyC344C0j0seYwSpXr4o8tja9HYHV6aqTb0
+Senha mongoDB: Maya66515141
+
+mongodb+srv://phillypehycaro:Maya66515141@cluster0.knwp7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
