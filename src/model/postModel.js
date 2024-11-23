@@ -4,7 +4,7 @@ import conectarAoBanco from "../config/dbConfig.js";
 // Conecta ao banco de dados usando a string de conexão do ambiente
 const conexao = await conectarAoBanco(process.env.STRING_CONEXAO);
 
-export default async function getTodosPosts() {
+export  async function getTodosPosts() {
     // Seleciona o banco de dados "Projeto-Back-End-Alura"
     const db = conexao.db("Projeto-Back-End-Alura");
   
@@ -14,4 +14,12 @@ export default async function getTodosPosts() {
     // Busca todos os documentos da coleção e retorna como um array
     return colecao.find().toArray();
 }
+ 
+export async function criarPost(novoPost) {
+    
+    const db = conexao.db("Projeto-Back-End-Alura");
+   
+    const colecao = db.collection("posts");
   
+    return colecao.insertOne(novoPost);
+}
